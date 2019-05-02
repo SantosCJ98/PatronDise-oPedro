@@ -1,0 +1,8 @@
+Realizar una aplicacion similar a la anterior (Guerreros). El main debe solicitar a una factoria la creación de un guerrero
+solicitandole el numero de fases del juego en la que se encuentra. Debemos crear 2 factorias: una que si estamos en la fase
+1 o 2, retorne un ninja, otra en la que si estamos en la fase 3 o 4, retorne un samurai y si estamos en la fase 5 o 6 un barbaro.
+
+Tambien tenemos que crear otra factoria similar a la anterior pero en la que los samurais solo pueden crearse si el juego
+se esta ejecutando un lunes. Si no es lunes creará un bárbaro, aunque este en una fase distinta a la 5 o 6.
+
+Las factorias concretas deben ser singleton.
