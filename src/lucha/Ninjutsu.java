@@ -9,7 +9,7 @@ public class Ninjutsu implements FormaLuchar {
 	
 	public void luchar(Guerrero guerrero) {
 		
-		System.out.printf("%s utiliza el Ninjutsu.\n", guerrero.getNombre());
+		System.out.printf("%s utiliza el Ninjutsu.\n", guerrero.tipoGuerrero());
 		
 	}
 

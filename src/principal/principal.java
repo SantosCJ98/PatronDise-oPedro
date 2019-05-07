@@ -1,47 +1,67 @@
 package principal;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 import factorias.*;
+
+import clases.*;
+
+import static teclado.Teclado.*;
 
 public class principal {
 
 	public static void main(String args[]) {
 
-		/*
-		 * 
-		 * Guerrero ninja = new GuerreroNinja("Naruto");
-		 * 
-		 * Guerrero samurai = new GuerreroSamurai("Keanu Reeves");
-		 * 
-		 * Guerrero barbaro = new GuerreroBarbaro("Conan");
-		 * 
-		 * ninja.display();
-		 * 
-		 * System.out.println();
-		 * 
-		 * samurai.display();
-		 * 
-		 * System.out.println();
-		 * 
-		 * barbaro.display();
-		 * 
-		 */
+		//Ej1
 		
 		FactoriaPrincipal facto1 = Factoria1.getFactoria1();
 		
 		FactoriaPrincipal facto2 = Factoria2.getFactoria2();
-	
-		
-		for (int i = 0; i < 6; i++) {
-			
-			System.out.printf("%d: %s\n", (i+1), facto1.crear_guerrero(i+1).getClass().getSimpleName());
-			
-		}
-		
-		System.out.println();
-		
-		System.out.printf("%s: %s\n", LocalDate.now().getDayOfWeek(), facto2.crear_guerrero(1).getClass().getSimpleName());
+		  
+		  Guerrero ninja = new GuerreroNinja();
+		  
+		  GuerreroNinja.Builder ninja2 = new GuerreroNinja.Builder("Greninja");
+		  
+		  Guerrero samurai = new GuerreroSamurai();
+		  
+		  GuerreroSamurai samurai2 = new GuerreroSamurai();
+		  
+		  Guerrero barbaro = new GuerreroBarbaro();
+		  
+		  ninja.display();
+		  
+		  samurai.display();
+		  
+		  barbaro.display();
+		  
+		//Ej2
+		  
+		  System.out.println("Factoria 1:\nElige una fase: (1-6)");
+		  
+		  System.out.println("Jugará el " + facto1.crear_guerrero(readRange(1, 6, Rangos.AMBOSIN)).tipoGuerrero());
+		  
+		  System.out.printf("Factoria 2:\n%s: %s\n", LocalDate.now().getDayOfWeek(), facto1.crear_guerrero(1).tipoGuerrero());
+		  
+		  
+		//Ej3
+		  
+		  System.out.println("Builder:");
+		  
+		  System.out.println(ninja2.setFuerza(8000).build().toString());
+		  
+		  
+		 //Ej4
+		  
+		  System.out.println("State:");
+		  
+		  for (int i = 0; i < 3; i++) {
+			  
+			  samurai2.verestado();
+			  
+		  }
+		  
+		  
 		
 		
 	}

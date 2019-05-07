@@ -24,13 +24,13 @@ public class Factoria2 extends FactoriaPrincipal {
 
 		if (LocalDate.now().getDayOfWeek() == DayOfWeek.MONDAY) {
 
-			return new GuerreroSamurai("Keanu Reeves");
+			return new GuerreroNinja();
 
 		}
 
 		else {
 
-			return new GuerreroBarbaro("Conan");
+			return new GuerreroBarbaro();
 
 		}
 

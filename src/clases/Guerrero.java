@@ -5,19 +5,22 @@ import interfaces.FormaSaludar;
 
 public class Guerrero {
 	
-	String nombre;
-	
 	FormaSaludar formasaludar;
 	
 	FormaLuchar formaluchar;
 	
-	public Guerrero(String nombre, FormaSaludar formasaludar, FormaLuchar formaluchar) {
-		
-		this.nombre = nombre;
+	//1
+	
+	public Guerrero(FormaSaludar formasaludar, FormaLuchar formaluchar) {
 		
 		this.formasaludar = formasaludar;
 		
 		this.formaluchar = formaluchar;
+		
+	}
+	
+	public Guerrero () {
+		
 		
 	}
 	
@@ -27,25 +30,21 @@ public class Guerrero {
 		
 	}
 	
-	void luchar() {
+	public void luchar() {
 		
 		formaluchar.luchar(this);
 		
 	}
 	
-	public String getNombre() {
-		
-		return nombre;
-		
-	}
-	
 	public void display() {
 		
-		System.out.println(getNombre() + " es un " + tipoGuerrero());
+		System.out.println("El guerrero es un " + tipoGuerrero());
 		
 		saludar();
 		
 		luchar();
+		
+		System.out.println();
 		
 	}
 	

@@ -8,7 +8,7 @@ public class Inclinarse implements FormaSaludar {
 	@Override
 	public void saludar(Guerrero guerrero) {
 		
-		System.out.printf("%s se inclinó.\n", guerrero.getNombre());
+		System.out.printf("%s se inclinó.\n", guerrero.tipoGuerrero());
 		
 	}
 

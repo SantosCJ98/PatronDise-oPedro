@@ -9,7 +9,7 @@ public class Esgrima implements FormaLuchar {
 	
 	public void luchar(Guerrero guerrero) {
 		
-		System.out.printf("%s utiliza la Esgrima\n", guerrero.getNombre());
+		System.out.printf("%s utiliza la Esgrima\n", guerrero.tipoGuerrero());
 		
 	}
 

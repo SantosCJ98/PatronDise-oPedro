@@ -21,19 +21,19 @@ public class Factoria1 extends FactoriaPrincipal {
 
 		if (fases == 1 || fases == 2) {
 
-			return new GuerreroNinja("Naruto");
+			return new GuerreroNinja();
 
 		}
 
 		else if (fases == 3 || fases == 4) {
 
-			return new GuerreroSamurai("Keanu Reeves");
+			return new GuerreroSamurai();
 
 		}
 
 		else {
 
-			return new GuerreroBarbaro("Conan");
+			return new GuerreroBarbaro();
 
 		}
 
